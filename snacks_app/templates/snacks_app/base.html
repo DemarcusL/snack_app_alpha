@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Rating Reviewer</title>
+      <style>
+            ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: red;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+      </style>
+</head>
+<!-- -------------------------------------------------------------------------------------------------------- -->
+
+<body>
+      <main>
+            <!-- <h1> Hello from your base template</h1> -->
+            <nav>
+                  <ul>
+                        <li>
+                              <!-- Tose names in the URL is used here ! It's used a reference tag of sorts ! -->
+                              <a href="{% url 'all_things' %}"> Home </a>
+                        </li>
+                        <li>
+                              <a href="{% url 'thing_create' %}"> Add a New Snacky Snack</a>
+                        </li>
+
+                  </ul>
+            </nav>
+
+            {% block content %}
+
+            {% endblock %}
+
+            <!-- {}
+            {} -->
+      </main>
+<!-- -------------------------------------------------------------------------------------------------------- -->
+      <footer>
+            <h6> &copy; Copyright 2021 Dom Enterprises</h6>
+      </footer>
+</body>
+</html>

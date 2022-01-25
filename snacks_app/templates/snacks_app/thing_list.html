@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Hello, These are the current snacks purchased.</h2>
+{% for thing in all_object_things %} 
+<!-- <h2><a href="{{thing.pk}}">{{thing.name}}</a></h2> -->
+<a>Snack Purchashed | <a href="{% url 'thing_read' thing.pk %}"> {{thing.title}} |</a></a>
+<a> Purchashed by : {{thing.purchaser}} |</a></a>
+<!-- <p>Product Description: {{thing.description}}</a></p> -->
+<!-- <p>{{thing.reviewer}}</a></p> -->
+
+
+{% endfor %} 
+{% endblock %}
+

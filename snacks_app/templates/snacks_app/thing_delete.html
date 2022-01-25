@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1> Delete a Thing</h1>
+<form method="POST" action='{% url "thing_delete" the_thing.pk %}'>
+    <input type="submit" value="Delete?"/>
+    {% csrf_token %}
+</form>
+{% endblock %}

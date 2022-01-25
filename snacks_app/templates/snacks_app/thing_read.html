@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<p>Name of snack: {{the_thing.title}}</p>
+<p>Buyer of snack: {{the_thing.purchaser}}</p>
+<p>Description: {{the_thing.description}}</p>
+<!-- <h4><a href="{% url 'thing_update' the_thing.pk %}"> Update </a></h4> -->
+<button><a href="{% url 'thing_update' the_thing.pk %}"> Update </a></button>
+
+<!-- <h4><a href="{% url 'thing_delete' the_thing.pk %}"> Delete </a></h4> -->
+<button><a href="{% url 'thing_delete' the_thing.pk %}"> Delete </a></button>
+
+
+<!-- <h6> ^ Details of a thing !  </h6> -->
+
+{% endblock %}
